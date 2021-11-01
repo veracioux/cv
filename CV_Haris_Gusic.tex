@@ -1,5 +1,5 @@
-\documentclass[14pt, a4paper]{article}
-\usepackage[margin=3cm]{geometry}
+\documentclass[9pt, a4paper]{extarticle}
+\usepackage[left=3cm, right=3cm, top=1.5cm, bottom=1.5cm]{geometry}
 \usepackage[bosnian]{babel}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -10,6 +10,9 @@
 \usepackage{xcolor}
 \usepackage{multirow}
 \usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{scalerel}
+\usepackage{fontawesome}
 
 % CUSTOM COMMANDS
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
@@ -17,7 +20,9 @@
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
 \newcommand{\cbullet}{$\color{black!40}\bullet$ }
 
+\newcommand{\email}{harisgusic1@gmail.com}
 \newcommand{\github}{https://github.com/veracioux}
+\newcommand{\linkedin}{https://linkedin.com/in/veracioux}
 \newcommand{\link}[2]{\textbf{\href{#1}{#2}}}
 \newcommand{\nextentry}{\\[5pt]}
 \newcommand{\role}{\\[3pt]&}
@@ -30,6 +35,14 @@
 	colorlinks,
 	urlcolor={link}
 }
+
+% SIZES
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titleformat*{\section}{\large\bfseries}
+
+%% DOWNLOADED IMAGES
+% \immediate\write18{curl https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png -o _build/github.png}
+% \immediate\write18{curl https://content.linkedin.com/content/dam/me/brand/en-us/brand-home/logos/In-Blue-Logo.png.original.png -o _build/linkedin.png}
 
 \title{\bfseries \Huge Haris Gušić}
 \author{\color{black!80} \Large Curriculum Vitae}
@@ -52,9 +65,9 @@
 			Zenica 72000 \\
 			Bosnia and Herzegovina \\
 			+387 64 400 9881 \\\\
-			% TODO Make this look better
 			\link{harisgusic1@gmail.com}{harisgusic1@gmail.com} \\
-			\link{\github}{github.com/veracioux}
+			\link{\github}{github/veracioux} \\
+			\link{\linkedin}{linkedin/veracioux} \\
 		\end{tabular}
 	\end{minipage}
     % MUG SHOT
@@ -62,7 +75,8 @@
         \color{main}\boxed{\includegraphics[height=3cm, trim={0, 10cm, 0, 10cm},
         clip]{HarisGusic.png}}
 	\end{minipage}
-	{ \vspace{0pt}\\ \color{main}\noindent\rule{\linewidth}{2pt}}
+
+    { \color{main}\noindent\rule{\linewidth}{2pt}}
 
 	\section*{\color{main} Education}
 
@@ -123,8 +137,8 @@
         } & \textbf{Internship,
         \href{https://search.bisnode.ba/ba/367191/elektromatik-d-o-o-zenica/}{Elektromatik
         d.o.o. Zenica}}\\&
-        PLC programming \cbullet Industrial sensors \cbullet Motor control \\&
-        Relay operation \cbullet Industrial schematic design
+        PLC programming \cbullet Industrial sensors \cbullet Motor control
+		\cbullet Industrial schematic design
 		\nextentry
 		% TP demonstrator
         Mar--Jun & \textbf{Undergraduate Teaching Assistant}, Faculty of
@@ -135,11 +149,10 @@
 	\section*{\color{main} Skills}
 
 	\begin{tabular}{L!{\VRule}R}
-		Programming & C, C++, Python, Shell scripting
+		Programming & C, C++, Python, Embedded systems, Shell scripting
 		\nextentry
-		Technologies & Qt, Linux, Sphinx, Arduino, Unity, Android, LaTeX
-		\nextentry
-		Industry & PLC programming, TIA Portal, SoMachine, ABB VFDs
+        Technologies & Qt, Linux, Git, Sphinx, Arduino, Unity (basic), LaTeX \nextentry
+        Industry & PLC programming, TIA Portal, SoMachine, ABB VFDs (basic)
 		\nextentry
 		Others & Teaching
 	\end{tabular}
@@ -151,7 +164,7 @@
 		\nextentry
 		English & \textbf{Advanced} (TOEFL$^\text{®}$ iBT score: 109)
 		\nextentry
-        German & \textbf{Reading and Writing} (intermediate), \textbf{Speaking}
+        German & \textbf{Reading and Writing} (basic), \textbf{Speaking}
         (elementary)
 	\end{tabular}
 
@@ -193,5 +206,6 @@
 %		2015--2019 & RADIO LICENCA %TODO specify
 %	\end{tabular}
 
-
 \end{document}
+
+% vim: shiftwidth=2
